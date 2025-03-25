@@ -1,0 +1,240 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    @media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    line-height: 1.3rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav {
+    background-color: #333;
+    color: white;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  
+  .navbar-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 10px 0 10px 10px ;
+  }
+  
+  .nav-link {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase ;
+    letter-spacing: 0.1rem;
+    color: white;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  a {
+    border-top: 1px solid white;
+    padding: 10px
+  }
+  
+  a:last-child {
+    border-bottom: 1px solid white;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
+  main {
+    margin-left: 250px; 
+    padding: 20px 40px 0 20px;
+  }
+  
+  .main-section {
+    margin-bottom: 40px;
+  }
+  
+  header {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    line-height: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: underline;
+  }
+  
+  .code-caveat {
+    font-weight: normal;
+    font-size: 0.75rem;
+    text-decoration: none;
+    font-style: italic;
+  }
+  
+  code {
+    display: block;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  li {
+    margin: 10px 0 5px 20px;
+    list-style:circle
+  }
+</style>
+<body>
+
+<nav id="navbar">
+    <header class="navbar-header">CSS Backgrounds</header>
+    <a class="nav-link" href="#Background_color">Background Color</a>
+    <a class="nav-link" href="#Background_Image">Background Image</a>
+    <a class="nav-link" href="#Background_Repeat">Background Repeat</a>
+    <a class="nav-link" href="#Background_Attachment">Background Attachment</a>
+    <a class="nav-link" href="#Background_Shorthand">Background Shorthand</a>
+</nav>
+
+<main id="main-doc">
+
+    <section id="Background_color" class="main-section">
+        <header>Background Color</header>
+         <p><span>The background-color</span> property specifies the background color of    an element.</p>
+         <p>Example: *</p>
+           <code> <p> body {
+            background-color: lightblue;
+          }
+         </p> </p></code>
+         <p><span>With CSS, a color is most often specified by:</span> </p>
+         <ul>
+            <li>a valid color name - like "red"</li>
+            <li>a HEX value - like "#ff0000"</li>
+            <li>an RGB value - like "rgb(255,0,0)"</li>
+         </ul>
+         <p>Look at CSS Color Values for a complete list of possible color values.</p>
+         <p><span>Other Elements: </span>You can set the background color for any HTML elements:</p>
+         <p><span>Example: </span>Here, the &lt;h1&gt;, &lt;p&gt;, and &lt;div&gt; elements will have different background colors: </p>
+            <code> h1 {
+                background-color: green;
+            }<br>
+              
+              div {
+                background-color: lightblue;
+              }<br>
+              
+              p {
+                background-color: yellow;
+              } </code>
+
+    </section> 
+
+    <section id="Background_Image" class="main-section">
+        <header>Background Image</header>
+         <p><span>The background-image</span> property specifies an image to use as the background of an element. By default, the image is repeated so it covers the entire element.</p>
+         <p>Example: *</p>
+         <p>Set the background image for a page: </p>
+           <code>body { <br>
+            background-image: url("paper.gif"); <br>
+          }</code>
+          <p>Example: *</p>
+          <p>This example shows a<span> bad combination</span>of text and background image. The text is hardly readable: </p>
+          <code>body {<br>
+            background-image: url("bgdesert.jpg");<br>
+          }</code>
+    </section>
+
+    <section id="Background_Repeat" class="main-section">
+        <header>Background Repeat</header>
+         <p>By default, the background-image property repeats an image both horizontally and vertically. Some images should be repeated only horizontally or vertically, or they will look strange, like this:</p>
+         <p>Example: *</p>
+           <code>body {<br>
+            background-image: url("gradient_bg.png");<br>
+          }</code>
+          <p>If the image above is repeated only horizontally (background-repeat: repeat-x;), the background will look better:</p>
+          <p>Example: *</p>
+          <code>body {<br>
+            background-image: url("gradient_bg.png");<br>
+            background-repeat: repeat-x;<br>
+          }</code>
+          <p><span>CSS background-repeat: no-repeat </span>Showing the background image only once is also specified by the background-repeat property:</p>
+          <p>Example: *</p>
+          <p>Show the background image only once:</p>
+          <code>body {<br>
+            background-image: url("img_tree.png");<br>
+            background-repeat: no-repeat;<br>
+          }</code>
+    </section>
+
+    <section id="Background_Attachment" class="main-section">
+        <header>Background Attachment</header>
+         <p><span>The background-attachment</span>property specifies whether the background image should scroll or be fixed (will not scroll with the rest of the page):</p>
+         <p>Example: *</p>
+         <p>Specify that the background image should be fixed:</p>
+           <code>body {<br>
+            background-image: url("img_tree.png");<br>
+            background-repeat: no-repeat;<br>
+            background-position: right top;<br>
+            background-attachment: fixed;<br>
+          }</code>
+          <p>Example: *</p>
+          <p>Specify that the background image should scroll with the rest of the page:</p>
+          <code>body {<br>
+            background-image: url("img_tree.png");<br>
+            background-repeat: no-repeat;<br>
+            background-position: right top;<br>
+            background-attachment: scroll;<br>
+          }</code>
+    </section>
+
+    <section id="Background_Shorthand" class="main-section">
+        <header>Background Shorthand</header>
+         <p><span>CSS background - Shorthand property </span>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+         <p>Instead of writing:</p>
+         <code>body {<br>
+            background-color: #ffffff;<br>
+            background-image: url("img_tree.png");<br>
+            background-repeat: no-repeat;<br>
+            background-position: right top;<br>
+          }</code>
+          <p><span>You can use the shorthand property background:</span></p>
+          <p>Example: *</p>
+          <p>Use the shorthand property to set the background properties in one declaration:</p>
+          <code>body {<br>
+            background: #ffffff url("img_tree.png") no-repeat right top;<br>
+          }</code>
+          <p><span>When using the shorthand property the order of the property values is:</span></p>
+          <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-position</li>
+          </ul>
+    </section>
+
+    <p><span class="code-caveat">(* lesser and greater than symbols are separated to show code and not apply it in the example)</span></p>
+</main>
+
+</body>
+</html>
+ 

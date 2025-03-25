@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Mobile Phone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #286bcf;
+    }
+
+    #header {
+      background-color: #5ac9eb;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+
+    #header-img {
+      width: 120px;
+      height: auto;
+    }
+
+    #nav-bar {
+      margin-top: 10px;
+    }
+
+    #nav-bar ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-link {
+      color: #5ac9eb;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .nav-link:hover {
+      text-decoration: underline;
+    }
+
+    #features {
+      background-color: #e0d1d1;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    #features h2 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #2b1f72;
+    }
+
+    #features p {
+      font-size: 18px;
+      color: #2b1f72;
+      margin-bottom: 40px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 30px;
+      justify-items: center;
+    }
+
+    .feature-item {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-item i {
+      font-size: 40px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .feature-item p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    #product-image {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #product-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #form-section {
+      background-color: #fafafa;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #form-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #b31b1b;
+    }
+
+    #form-section p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    #form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #form label {
+      font-size: 18px;
+      color: #333;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    #email {
+      width: 100%;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    #submit {
+      background-color: #25b15b;
+      color: white;
+      font-size: 18px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #submit:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      #form-section {
+        padding: 40px 15px;
+      }
+
+      #form {
+        padding: 30px;
+      }
+
+      #submit {
+        font-size: 16px;
+        padding: 12px 25px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <img src="logo.png" id="header-img" alt="Smart Mobile Phone Logo">
+    <nav id="nav-bar">
+      <ul>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#video-section" class="nav-link">Product Demo</a></li>
+        <li><a href="#form-section" class="nav-link">Buy Now</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="features">
+      <h2>Experience the Future with Our Smart Phone</h2>
+      <p>Our Smart Phone offers cutting-edge technology, seamless performance, and stunning design. Stay connected with a device that enhances your life.</p>
+
+      <div id="product-image">
+        <img src="https://via.placeholder.com/300x600.png?text=Smart+Phone" alt="Smart Phone">
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-camera"></i>
+          <h3>High-Resolution Camera</h3>
+          <p>Capture stunning photos and videos with our advanced camera technology.</p>
+        </div>
+
+        <div class="feature-item">
+          <i class="fas fa-battery-full"></i>
+          <h3>Long-lasting Battery</h3>
+          <p>Enjoy all-day usage with a powerful battery that keeps you connected.</p>
+        </div>
+
+        <div class="feature-item">
+          <i class="fas fa-bolt"></i>
+          <h3>Fast Performance</h3>
+          <p>Experience lightning-fast performance with the latest processor.</p>
+        </div>
+
+        <div class="feature-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h3>Sleek Design</h3>
+          <p>Make a statement with a modern and stylish design that's comfortable to hold.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="video-section">
+      <h2>See It in Action</h2>
+      <p>Watch the video below to see how our Smart Phone can change your life!</p>
+      <div class="video-container">
+        <iframe id="video" width="100%" height="450" src="https://www.youtube.com/watch?v=kDcS_TW6e3A" 
+        frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section id="form-section">
+      <h2>Get Yours Today!</h2>
+      <p>Sign up now and be the first to receive exclusive offers on our Smart Phone.</p>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <label for="email">Enter your email to get the latest updates:</label>
+        <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+        <input type="submit" id="submit" value="Subscribe & Buy Now">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smart Mobile Phone. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
